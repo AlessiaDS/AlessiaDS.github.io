@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/dcmo7.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="button">
+        <button class="back-button" onclick="window.location.href='di-cosa-mi-occupo.html'">&#8592; Torna Indietro</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Balbuzie</span>
+                    <span class="desktop-only">Balbuzie</span>
+                </h1>
+            </div>
+            <p>Mentre parla il tuo bambino mette in atto blocchi, ripetizioni, allungamenti? </p>
+            <p>Meglio attendere qualche anno?</p>
+            
+            <p>In età prescolare possono presentarsi balbuzie transitoria o permanente, ma in entrambi i casi il bambino potrebbe provare frustrazione o vergogna. Per questo le ricerche evidenziano che prima si interviene maggiori possono essere prevenuti vissuti negativi e, nel caso di balbuzie permanente, più precocemente si interverrà, migliori saranno gli esiti del trattamento, sia in termini fluenza verbale, sia a livello di benessere comunicativo.</p>
+        
+        </div>
+        
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    
+</body>
+</html>

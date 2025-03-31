@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <div class="intro-title">
+                    <h2>Benvenuto!</h2> 
+                </div>
+                <div class="intro-text">
+                    <video width="440" height="560" controls>
+                        <source src="img/video_mipresento.mp4" type="video/mp4">
+                    </video>
+                    <p>Mi chiamo Elena Magillo e sono una Logopedista genovese. Il Logopedista è il professionista sanitario che, in possesso della Laurea abilitante (L/SNT2), si occupa della valutazione, riabilitazione, prevenzione ed educazione di tutte le patologie che provocano disturbi della comunicazione e/o del linguaggio, specifici o secondari ad altre patologie. Inoltre, previene, valuta e riabilita i disturbi della voce, delle funzioni orali ed i Disturbi Specifici dell’Apprendimento (DSA).</p>
+                    <p>Come posso esserti utile? In questa pagina web puoi trovare sezioni dedicate ai miei servizi. Per qualsiasi informazione puoi contattarmi via WhatsApp, chiamarmi o scrivermi una mail. Sarò felice di poterti aiutare!</p>
+                </div>
+            </div>
+        </section>
+        
+
+        <section id="servizi">
+            <div class="services-content">
+                <div class="service">
+                    <h3>Valutazione Logopedica</h3>
+                    <p class="preview-text">La valutazione logopedica è sempre preceduta da un primo colloquio...</p>
+                    <div class="extra-text" style="display: none;">
+                        <p>La valutazione logopedica è sempre preceduta da un primo colloquio, ove si richiede la presenza di un genitore, se possibile entrambi. Il processo di valutazione viene effettuato in un setting stimolante e accogliente e si basa sulle linee guida e le ricerche della letteratura recente. L’iter si costituisce di un’osservazione qualitativa e di una valutazione strumentale ed è finalizzato alla stesura del profilo comunicativo-linguistico e del bilancio logopedico. 
+                            Al termine della valutazione verrà consegnata alla famiglia la relazione logopedica, discussa durante un colloquio di restituzione, nel quale verranno condivisi gli obiettivi di trattamento e forniti consigli. 
+                            Se hai dei dubbi in merito alle modalità di valutazione non esitare a contattarmi, risponderò molto volentieri alle tue domande!
+                        </p>                            
+                    </div>
+                    <button class="toggle-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+        
+                <div class="service">
+                    <h3>Trattamento Logopedico</h3>
+                    <p class="preview-text">Il centro del mio intervento è il singolo individuo, con caratteristiche e bisogni unici...</p>
+                    <div class="extra-text" style="display: none;">
+                        <p>Il centro del mio intervento è il singolo individuo, con caratteristiche e bisogni unici. Questo è il motivo per cui non può esistere un percorso riabilitativo passpartout, bensì questo sarà pianificato su misura e terrà conto dei punti di forza e di debolezza individuali.</p>
+                    </div>
+                    <button class="toggle-button" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+            </div>
+        </section>
+        
+        <div class="info">
+            <div class="info-content">
+                <p>Credo fortemente del lavoro di squadra, che coinvolge…</p>
+            </div>
+        </div>
+        <section id="collab" class="collab-section">
+            <div class="child card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/child.gif" alt="Child Icon" class="child-icon">
+                    </div>
+                    <div class="card-back child-details">
+                        <h3>Bambino</h3>
+                        <p>Il setting ludico e l’utilizzo di attività motivanti faciliteranno il raggiungimento degli obiettivi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="family card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/family.gif" alt="Family Icon" class="family-icon">
+                    </div>
+                    <div class="card-back contact-details">
+                        <h3>Famiglia</h3>
+                        <p>I genitori (ma anche i fratelli, i nonni, i familiari…) saranno chiamati a riproporre quanto sperimentato dal bambino durante il trattamento logopedico.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="school card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="img/school.gif" alt="School Icon" class="school-icon">
+                    </div>
+                    <div class="card-back contact-details">
+                        <h3>Altri specialisti<br>e/o<br>Insegnanti</h3>
+                        <p>Credo in una presa in carico interdisciplinare fondata sul confronto e sulla condivisione.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="info">
+            <div class="info-content">
+                <p>I trattamenti vedono l’applicazione di quanto raccomandato dalle migliori evidenze scientifiche e dalle indicazioni presenti nelle Linee Guida internazionali.</p>
+            </div>
+        </div>
+
+        <section id="prompt">
+            <div class="prompt-title-container">
+                <div class="prompt-title">
+                    <h3>Il Prompt ©</h3>
+                </div>
+            </div>
+            <div class="prompt-content"> <!-- Updated container name -->
+                <!-- Quote Section -->
+                <div class="prompt-section">
+                    <div class="quote-container">
+                        <blockquote>
+                            <p>“Il PROMPT vi insegnerà come guardare,<br>
+                                Le vostre mani vi insegneranno a conoscere,<br>
+                                Il vostro cuore vi insegnerà a vedere.”</p>
+                            <cite>– Deborah A. Hayden, 1995</cite>
+                        </blockquote>
+                    </div>
+                </div>
+                <!-- Prompt Definition Section -->
+                <div class="prompt-section">
+                    <p class="preview-text"><strong>Il PROMPT</strong>, acronimo di <em>Prompts for Restructuring Oral Muscular Phonetic Targets</em> (Hayden et al., 2010), è un programma olistico, dinamico e multisensoriale finalizzato alla valutazione ed il trattamento delle abilità motorie necessarie alla produzione dello speech.</p>
+                        <div class="extra-text" style="display: none;">
+                            <p><strong>Il PROMPT</strong>, acronimo di <em>Prompts for Restructuring Oral Muscular Phonetic Targets</em> (Hayden et al., 2010), è un programma olistico, dinamico e multisensoriale finalizzato alla valutazione ed il trattamento delle abilità motorie necessarie alla produzione dello speech.</p>
+                            <p>Secondo la cornice concettuale del PROMPT, vi è un’interazione, in costante bilanciamento, tra tre differenti domini (rappresentati in figura) Fisico-sensoriale, Cognitivo-Linguistico e Socio-Emozionale.
+                                La produzione verbale può essere ostacolata per ragioni molteplici, talvolta per l’alterazione di anche solo uno di questi domini. Il compito del Logopedista PROMPT è quello di valutare i diversi domini, al fine di sfruttare i punti di forza del cliente per massimizzare le sue potenzialità comunicative.
+                                Il PROMPT può essere definito un “approccio”, in quanto offre un percorso sistematico per pianificare ed organizzare specificatamente la direzione e la tipologia del trattamento necessario al ritardo o disturbo della produzione verbale. L’obiettivo finale dell’approccio è la comunicazione verbale interattiva e funzionale. 
+                                Il PROMPT incorpora principi dell’apprendimento motorio, principi neuromuscolari, somestesici e sfrutta informazioni uditive e visive per fornire un feedback al sistema. Il logopedista PROMPT fornisce informazioni a tutti questi canali utilizzando il tocco, la pressione ed alcuni posizionamenti specifici, creando una consapevolezza uditiva e visiva e fornendo un supporto per i meccanismi di controllo dello speech. 
+                                L’utilizzo di prompts tattili-cinestesici, sulla mandibola, sul viso e sotto il mento, aiutano a sviluppare o a riorganizzare lo speech; è applicabile in presenza di svariate problematiche che vanno ad investire il controllo motorio del linguaggio. Tra queste è possibile citare per esempio la Disprassia Verbale Evolutiva, i Disturbi dello spettro Autistico, Disartria Evolutiva e sordità.  
+                                </p>
+                            <div class="prompt-img-section">
+                                <figure>
+                                    <img src="img/diagram_prompt.jpg" alt="Diagram of PROMPT Conceptual Framework">
+                                    <figcaption>Interazione dei domini nel modello PROMPT.</figcaption>                                </figure>                    
+                            </div>
+                            
+
+                        </div>
+                    <button class="toggle-buttonP" onclick="toggleText(this)">Scopri di più</button>
+                </div>
+                <!-- Additional Information Section -->
+                <div class="prompt-img-section">
+                    <figure>
+                        <img src="img/prompt.png" alt="Diagram of PROMPT Conceptual Framework">
+                    </figure>                    
+                </div>
+                <div class="prompt-section">
+                    <p>Il PROMPT è coperto da Copyright ed applicabile solo in seguito all'acquisizione della certificazione conseguibile attraverso i corsi di formazione del PROMPT Institute.</p>
+                    <ul class="reference-links">
+                        <a href="https://promptinstitute.com/page/WIPforResearch" target="_blank" class="card-link">
+                            <li>What is PROMPT? - The PROMPT Institute</li>
+                        </a>
+                    </ul>
+                </div>
+                
+                
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    
+
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        function toggleText(button) {
+            const service = button.parentElement;
+            const previewText = service.querySelector('.preview-text');
+            const extraText = service.querySelector('.extra-text');
+            
+            if (extraText.style.display === "none") {
+                previewText.style.display = "none";
+                extraText.style.display = "block";
+                button.textContent = "Mostra meno"; // Change button text when showing
+            } else {
+                previewText.style.display = "block";
+                extraText.style.display = "none";
+                button.textContent = "Scopri di più"; // Reset button text when hiding
+            }
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+</html>

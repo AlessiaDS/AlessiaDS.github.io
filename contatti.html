@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/contatti.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="team-section" class="info-section">
+            <h2>Contattami!</h2>
+            <p>
+                Siamo un’équipe di specialisti formata da Logopedisti, Psicologi, Neuropsicomotricisti, 
+                Neuropsichiatra infantile, Pedagogisti, Tutor e Osteopati.
+            </p>
+            <hr class="separator-line">
+            <a href="http://linkedin.com/in/elena-magillo-a5239b208" target="_blank" rel="noopener noreferrer">
+                <img src="img/linkedin.png" alt="Linkedin" class="in-icon">
+            </a>        
+        </section>
+        
+        <section id="map-section">
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2883.320558095234!2d8.944147915673293!3d44.40565017910243!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d3416b7bcf7a1b%3A0x84a2f7761e9bfc1!2sVia%20XX%20Settembre%2C%208%2F21%2C%2016121%20Genova%20GE%2C%20Italia!5e0!3m2!1sit!2sit!4v1631032977285!5m2!1sit!2sit"
+                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+                 </iframe>
+            </div>
+        </section><section id="contact-info" class="info-section">
+            <div class="contact-card phone-card">
+                <img src="img/phone.gif" alt="Phone Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Telefono</h3>
+                    <a href="tel:+39378 063 4278">+39 378 063 4278</a>
+
+                </div>
+            </div>
+            <div class="contact-card email-card">
+                <img src="img/message.gif" alt="Email Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Email</h3>
+                    <p>elena.magillo@gmail.com</p>
+                </div>
+            </div>
+            <div class="contact-card address-card">
+                <img src="img/around-the-world.gif" alt="Location Icon" class="contact-icon">
+                <div class="contact-details">
+                    <h3>Indirizzo</h3>
+                    <p>Via XX Settembre 8/21 5° piano studio MULTI 21 <br>Genova, Italia</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+    
+            <div class="footer-content">
+                <ul class="footer-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li>|</li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li>|</li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+                <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+            </div>
+        </footer>
+
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+
+</body>
+</html>

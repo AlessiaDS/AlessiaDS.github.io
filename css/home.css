@@ -1,0 +1,751 @@
+/* Reset some default margins and styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Background for the entire page with a shadow overlay */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/home.jpg.avif') no-repeat center center;
+    background-size: cover; /* Ensure image covers the entire background without repeating */
+}
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Almost black with 80% opacity */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Scales between 0.8rem and 2rem */
+    color: white;
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: rgb(189, 188, 186);
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #afd0af; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: rgb(254, 255, 251);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+
+
+/* Main content styling */
+main {
+    padding: 0; /* Remove padding from main */
+    margin: 0; /* Remove any default margin that might create space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Section styling */
+section {
+    margin: 0; /* Remove bottom margin to avoid space between sections */
+    padding-bottom: 0; /* Remove padding at the bottom of the section */
+}
+/* Section styling */
+#intro {
+    max-width: 800px;
+    text-align: center; /* Allinea il testo al centro */
+    margin-top: 180px; /* Imposta la distanza top */
+}
+
+/* Intro Section Styling */
+.intro-content {
+    width: 100vw; /* Larghezza viewport completa per un aspetto fluido */
+    margin-left: calc(-50vw + 50%); /* Centra il contenuto */
+    background-color: rgb(254, 255, 251);
+    padding: clamp(20px, 5vw, 40px) 0; /* Padding reattivo */
+    position: relative;
+    z-index: 1; /* Garantisce che sia sopra gli altri elementi */
+}
+
+/* Titolo "Benvenuto!" centrato */
+.intro-title {
+    margin-bottom: 20px; /* Distanza tra il titolo e il contenuto sottostante */
+}
+
+/* Heading Styling */
+.intro-title h2 {
+    column-span: all; /* Heading spans across both columns */
+    text-align: center;
+    font-size: clamp(2.5em, 5vw, 3.5em); /* Responsive font size */
+    color: #333; /* Dark text color */
+    margin-bottom: clamp(25px, 3vw, 35px); /* Bottom margin for spacing */
+
+    font-weight: bold;
+}
+/* Video styling */
+video {
+    max-width: 100%; /* La larghezza massima del video si adatta al contenitore */
+    width: 80%; /* Larghezza reattiva del video */
+    height: auto;
+}
+
+
+/* Paragraph Styling */
+.intro-text p {
+    line-height: 1.8; /* Improved readability */
+    color: #555; /* Medium grey color */
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin-bottom: clamp(10px, 2vw, 15px); /* Responsive spacing between paragraphs */
+}
+/* Intro Text Container */
+.intro-text {
+    max-width: 90vw; /* Limits width for better responsiveness */
+    width: clamp(300px, 90vw, 1200px); /* Responsive width limit */
+    margin: 0 auto; /* Center text content within intro section */
+    padding: clamp(10px, 3vw, 50px); /* Responsive inner padding */
+    text-align: justify; /* Justify for balanced look */
+    column-count: 2; /* Default two-column layout */
+    column-gap: clamp(20px, 4vw, 40px); /* Responsive gap between columns */
+    column-fill: balance; /* Distributes text evenly between columns */
+}
+
+/* Heading Styling */
+.intro-text h2 {
+    column-span: all; /* Heading spans across both columns */
+    text-align: center;
+    font-size: clamp(1.5em, 5vw, 2.5em); /* Responsive font size */
+    color: #333; /* Dark text color */
+    margin-bottom: clamp(25px, 3vw, 35px); /* Bottom margin for spacing */
+
+    font-weight: bold;
+}
+
+/* Remove margin from last paragraph */
+.intro-text p:last-of-type {
+    margin-bottom: 0;
+}
+
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    video {
+        width: 100%; /* Make video take full width */
+        height: auto; /* Keep the aspect ratio */
+        margin-bottom: 10%;
+    }
+    .intro-text {
+        column-count: 1; /* Switch to single column for smaller screens */
+        padding: clamp(15px, 4vw, 30px); /* Adjusted padding */
+    }
+
+    .intro-text h2 {
+        column-span: none; /* Disable column span on smaller screens */
+        font-size: clamp(1.2em, 4vw, 2em); /* Adjust font size */
+        margin-bottom: clamp(15px, 3vw, 25px); /* Bottom margin for spacing */
+    }
+
+    .intro-text p {
+        font-size: clamp(0.85em, 2vw, 1em); /* Smaller font size for readability */
+    }
+}
+
+/* Button Styling */
+.toggle-button {
+    background-color: transparent;
+    border: solid #333;
+    color: #333;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: clamp(0.8em, 1vw, 1em);
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    border-color: white; /* Slightly darker on hover */
+    color: white
+}
+
+/* Button Styling */
+.toggle-buttonP {
+    background-color: transparent;
+    border: solid #333;
+    color: #333;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: clamp(0.8em, 1vw, 1em);
+    transition: background-color 0.3s;
+}
+
+.toggle-buttonP:hover {
+    border-color: #A8D5BA; /* Slightly darker on hover */
+    color: #A8D5BA
+}
+
+/* Services Section Styling */
+#servizi {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the full-width section */
+    background-color: #D5E6DF; /* White background color for the entire section */
+    padding: 0 clamp(10px, 5vw, 20px) clamp(10px, 5vw, 20px); /* Remove top padding */
+    position: relative;
+    z-index: 1; /* Ensure it stays above other elements */
+}
+
+/* Full-width Service title with green background */
+#servizi h2 {
+    width: 100vw; /* Full width */
+    margin: 0 calc(-50vw + 50%); /* Center the h2 full width and remove extra space from the top */
+    background-color:#333; /* Green background for the h2 row */
+    text-align: center;
+    font-size: clamp(1.5em, 5vw, 2.5em); /* Responsive font size */
+    color: #333;
+    padding: clamp(10px, 2vw, 15px); /* Padding inside the h2 for spacing */
+    font-weight: bold;
+    color:white;
+
+}
+/* Services Content Styling */
+.services-content, .info .info-content {
+    max-width: 90vw; /* Set maximum width for responsiveness */
+    width: clamp(300px, 90vw, 1200px); /* Uniform responsive width */
+    margin: 0 auto; /* Center align the content */
+    padding: clamp(10px, 3vw, 50px); /* Consistent padding for inner spacing */
+    text-align: justify; /* Justify text for improved readability */
+}
+
+/* Individual Service Styling */
+.service h3 {
+    font-size: clamp(1.2em, 3vw, 2em); /* Responsive font size for service titles */
+    color: #333;
+    margin: clamp(15px, 3vw, 25px) 0; /* Top and bottom margin, no side margin */
+    font-weight: bold;
+}
+
+.service p {
+    line-height: 1.8;
+    color: #555;
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin: 0 0 clamp(10px, 2vw, 15px); /* Bottom margin for spacing */
+    text-align: justify; /* Improved readability */
+}
+
+/* Info Section Styling */
+.info {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the full-width background */
+    position: relative;
+    z-index: 1;
+}
+
+.info .info-content {
+    font-size: clamp(1em, 2.5vw, 1.2em); /* Responsive font size */
+    color: white; /* Darker color for text */
+}
+
+.info2 {
+    width: 100vw; /* Full viewport width */
+    margin-left: calc(-50vw + 50%); /* Center the full-width background */
+    position: relative;
+    z-index: 1;
+}
+
+.info2 .info-content2 {
+    font-size: clamp(0.7em, 2.5vw, 0.9em); /* Responsive font size */
+    color: white; /* Darker color for text */
+    text-align: center;
+}
+
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    #servizi {
+        padding: 0 clamp(8px, 3vw, 15px) clamp(8px, 3vw, 15px); /* Adjust padding for smaller screens with no top padding */
+    }
+
+    #servizi h2 {
+        font-size: clamp(1.2em, 4vw, 2em); /* Adjusted font size for small screens */
+    }
+
+    .service h3 {
+        font-size: clamp(1.1em, 3vw, 1.8em); /* Adjusted service title size for small screens */
+        margin-bottom: clamp(15px, 3vw, 25px); /* Maintain extra space below h3 */
+    }
+
+    .service p {
+        font-size: clamp(0.85em, 2vw, 1em); /* Adjusted font size for readability */
+    }
+}
+
+/* Set box-sizing globally for consistent width and height calculations */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Collab section styling */
+.collab-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(20px, 5vw, 50px); /* Responsive gap that grows with viewport */
+    padding: clamp(10px, 2vw, 30px) 0; /* Responsive padding that grows with viewport */
+    max-width: 100vw; /* Prevents overflow beyond viewport */
+    overflow: hidden; /* Hide any excess overflow */
+}
+
+/* Card container styling */
+.card {
+    perspective: 1000px; /* Needed for 3D flip effect */
+    width: clamp(150px, 30vw, 300px); /* Larger, rectangular width */
+    height: clamp(300px, 40vh, 500px); /* Larger height for rectangular shape */
+    overflow: hidden; /* Hide overflow if content extends */
+}
+
+/* Inner card for flipping effect */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; /* Ensures 3D effect */
+}
+
+/* Flip on hover */
+.card:hover .card-inner {
+    transform: rotateY(180deg); /* Flips the card */
+}
+
+/* Front and back face styling */
+.card-front, .card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back when not flipped */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Hide any overflow from image or text */
+    padding: 20px; /* Add padding for inner content */
+}
+
+/* Front face (image only) */
+.card-front {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-front img {
+    max-width: 70%; /* Center the image and limit size to fit inside card */
+    max-height: 70%;
+    object-fit: contain; /* Maintain image aspect ratio */
+}
+
+/* Back face (text content) */
+.card-back {
+    background-color: #A8D5BA; /* Background color for back */
+    color: #333;
+    transform: rotateY(180deg); /* Flip the back content initially */
+    padding: 20px;
+    text-align: center;
+    font-size: clamp(0.8em, 1.5vw, 1em); /* Slightly larger font size for readability */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Responsive styling for small screens */
+@media (max-width: 768px) {
+    .collab-section {
+        flex-direction: column; /* Stack cards in a single column */
+        align-items: center; /* Center the cards */
+        gap: clamp(55px, 7vw, 20px); /* Responsive gap that grows with viewport */
+        padding: 10px 0; /* Adjust padding for smaller screens */
+    }
+
+    /* Adjust card size for mobile */
+    .card {
+        width: clamp(180px, 80vw, 300px); /* Smaller width for mobile */
+        height: clamp(250px, 50vh, 350px); /* Adjust height proportionally */
+    }
+
+    /* Adjust font size on card back for readability on smaller screens */
+    .card-back {
+        font-size: clamp(0.8em, 1.2vw, 1em);
+    }
+}
+
+/* Full-width background color for the entire prompt section */
+#prompt {
+    background-color: rgb(254, 255, 251); /* Full-width background color */
+    padding: clamp(10px, 2vw, 20px) 0; /* Vertical padding */
+    margin-left: calc(-50vw + 50%); /* Center-aligns with negative margin trick */
+    width: 100vw; /* Forces full viewport width */
+    position: relative;
+}
+/* Center the figure container within .prompt-section */
+.prompt-img-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically if needed */
+    text-align: center; /* Center-align any figure content */
+}
+
+/* Styling for Figure and Image */
+.prompt-img-section figure {
+    margin: 0; /* Reset margin */
+    width: 100%; /* Full width to make it responsive */
+    max-width: 500px; /* Optional max-width to limit the image size */
+}
+
+.prompt-img-section figure img {
+    display: block; /* Remove inline spacing issues */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: rounded corners */
+}
+
+
+/* Title Container and Content Styling for Consistent Alignment */
+.prompt-title-container,
+.prompt-content {
+    max-width: 90vw;
+    width: clamp(300px, 90vw, 1200px); /* Centers content within #prompt */
+    margin: 0 auto;
+    padding: clamp(5px, 2vw, 10px); /* Inner padding */
+    box-sizing: border-box;
+    
+}
+.prompt-section {
+    line-height: 1.8;
+    color: #555;
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin: 0 0 clamp(10px, 2vw, 15px); /* Bottom margin for spacing */
+    text-align: justify; /* Improved readability */
+}
+
+/* Title Styling */
+.prompt-title h3 {
+    font-size: clamp(1.5em, 5vw, 2.5em); /* Responsive font size */
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+    text-align: left; /* Align text left */
+}
+
+/* Consistent Styling for h3 within prompt sections */
+#prompt h3 {
+    font-size: clamp(1.2em, 3vw, 2em); /* Match h3 font size to other sections */
+    color: #333;
+    margin: clamp(15px, 3vw, 25px) 0;
+    font-weight: bold;
+}
+
+/* Styling for Quote Container aligned to the right */
+#prompt .quote-container {
+    text-align: left;
+    margin: 0 0 30px auto; /* Moves the container to the right */
+    max-width: 600px;
+    width: 80%; /* Responsive width to scale down on smaller screens */
+    padding-left: 40px; /* Adjust padding for alignment */
+    border-left: 4px solid #afd0af; /* Lateral line on the left side */
+    font-style: italic; /* Italicize font */
+    font-size: clamp(0.7rem, 2.5vw, 1.25rem); /* Responsive font size */
+    color: #333; /* Adjust color if needed */
+    box-sizing: border-box;
+}
+
+
+#prompt .quote-container blockquote {
+    margin: 0; /* Remove default margin */
+    padding: 0;
+}
+
+#prompt .quote-container cite {
+    display: block;
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    #prompt .quote-container {
+        width: 100%; /* Full width on smaller screens */
+        margin: 0 auto 20px auto; /* Center align on small screens */
+    }
+}
+
+/* Styling for Figures */
+#prompt figure {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* Style the card-like links */
+.reference-links {
+    list-style: none; /* Remove default list styling */
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between each card */
+}
+
+.card-link {
+    text-decoration: none; /* Remove underline from links */
+}
+
+.card-link li {
+    display: block;
+    background-color: #f5f5f5; /* Light background color for the card */
+    border: 1px solid #ddd; /* Subtle border */
+    padding: 15px;
+    color: #333; /* Text color */
+    font-size: 1em;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover effect */
+}
+
+.card-link li:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: #e7f7e7; /* Change background color on hover */
+}
+
+
+
+/* Footer section */
+footer {
+    color: rgb(254, 255, 251);
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for "Link Utili" title with reduced margin */
+.footer-title {
+    font-size: 1.1em;
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
+    font-weight: bold;
+    color: white; /* Adjust color as desired */
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+}

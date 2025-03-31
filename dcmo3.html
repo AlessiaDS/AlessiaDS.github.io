@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/dcmo3.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="button">
+        <button class="back-button" onclick="window.location.href='di-cosa-mi-occupo.html'">&#8592; Torna Indietro</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Disturbi Specifici di Apprendimento</span>
+                    <span class="desktop-only">Disturbi Specifici di Apprendimento</span>
+                </h1>
+            </div>
+            <p>Con l'acronimo di DSA si identificano i <strong> Specifici Dell’Apprendimento</strong> che comportano difficoltà negli apprendimenti scolastici, dominio specifiche, senza che vi sia una compromissione del funzionamento intellettivo generale. All’interno di questa categoria, è possibile identificare:</p>
+            
+            <div class="collapsible-container">
+                <button class="collapsible">Dislessia</button>
+                <div class="content">
+                    <p>Dislessia, disturbo specifico della lettura, in termini di accuratezza e di rapidità.</p>
+                </div>
+            <button class="collapsible">Disortografia</button>
+                <div class="content">
+                    <p>Disortografia, ovvero disturbo ortografico della scrittura, si manifesta nell’incapacità di rispettare le regole di trasformazione del linguaggio parlato in linguaggio scritto.</p>
+                </div>
+            <button class="collapsible">Disgrafia</button>
+                <div class="content">
+                    <p>Disgrafia, disturbo specifico di scrittura che riguarda invece la componente esecutiva, grafo-motoria ed incide negativamente sulla fluidità, velocità ed efficacia della scrittura.</p>
+                </div>
+
+            <button class="collapsible">Discalculia</button>
+            <div class="content">
+                <p>Discalculia, disturbo specifico delle abilità aritmetiche.</p>
+            </div>
+            </div>
+            <p class="box"> Questi si possono presentare singolarmente o con comorbilità.</p>
+        
+            <div class="title">
+                <h1>Meglio attendere qualche anno?</h1>
+
+        
+            <p>Nonostante per poter porre diagnosi sia necessario attendere il termine del secondo anno della scuola primaria (per dislessia, disortografia e disgrafia) o del terzo anno (nel caso della discalculia), è possibile individuare alcuni tratti comuni e ricorrenti, riscontrabili fin dall’ultimo anno della scuola dell’Infanzia.</p>
+            <p>Tra questi ricordiamo la presenza di difficoltà in compiti relativi alla consapevolezza fonologica (capacità di riconoscere e manipolare i suoni della lingua), all’associazione tra “suono” e “lettera”, alla denominazione rapida di figure sequenziali (RAN), alla consapevolezza notazionale (capacità di elaborare forme di scrittura simili a quella convenzionale), alla capacità di apprendimento di associazioni visivo-verbali, al vocabolario ed alla memoria a breve temine.</p>
+            <p>Tali “campanelli dall’allarme” sono evidenziati all’interno delle recenti Linee Guida per la gestione dei Disturbi Specifici di Apprendimento (2021), in quanto sono noti i benefici di un intervento precoce, prima che venga posta diagnosi.</p>
+        </div>
+        
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    
+</body>
+</html>

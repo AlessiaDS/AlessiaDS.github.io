@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/mipresento.css">
+</head>
+<body>
+
+    
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                    <div class="header-text">
+                        <h1>Elena Magillo</h1>
+                        <p class="subtitle">Dottoressa in logopedia</p>
+                    </div>
+                </div>
+                <div class="nav-bar">
+                    <span class="hamburger" onclick="toggleMenu()">☰</span>
+                    <ul class="menu" id="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mipresento.html">Mi presento</a></li>
+                        <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <main>
+        <section class="intro-section">
+            <div class="intro-text">
+                <h2>Mi presento, sono Elena!</h2>
+                <p>Mi chiamo Elena Magillo, Logopedista genovese, iscritta all’Albo TSRM PSTRP di Genova, Imperia e Savona con il numero 292. Ho lavorato in diversi studi e centri riabilitativi nel genovesato e nel savonese. Ad oggi, ricevo privatamente in via XX Settembre, a Genova.</p>
+            </div>
+            <div class="intro-image">
+                <img src="img/intro.png" alt="Elena Magillo">
+            </div>
+        </section>      
+        <!-- Section with images to open in lightbox -->
+        <section class="carousel-section">
+            <div class="slideshow-container">
+                <div class="slideshow">
+                    <!-- Original Slides (only 3 images) -->
+                    <img src="img/1.JPG" alt="Image 1" onclick="openModal();currentSlide(1)">
+                    <img src="img/3.JPG" alt="Image 2" onclick="openModal();currentSlide(2)">
+                    <img src="img/4.JPG" alt="Image 3" onclick="openModal();currentSlide(3)">
+                    <img src="img/im1.JPG" alt="Image 4" onclick="openModal();currentSlide(4)">
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal/Lightbox -->
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <!-- Slides (only 3 images for the modal) -->
+                <div class="mySlides">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/1.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/2.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/3.JPG" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/im1.JPG" style="width:100%">
+                </div>
+
+                <!-- Next/previous controls -->
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <!-- Caption text -->
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+                <!-- Thumbnail image controls (Horizontal list) -->
+                <div class="thumbnail-container">
+                    <img class="demo" src="img/1.JPG" onclick="currentSlide(1)" alt="Image 1">
+                    <img class="demo" src="img/2.JPG" onclick="currentSlide(2)" alt="Image 2">
+                    <img class="demo" src="img/3.JPG" onclick="currentSlide(3)" alt="Image 3">
+                    <img class="demo" src="img/im1.JPG" onclick="currentSlide(4)" alt="Image 1">
+                    <img class="demo" src="img/im4.JPG" onclick="currentSlide(5)" alt="Image 2">
+                    <img class="demo" src="img/im6.JPG" onclick="currentSlide(6)" alt="Image 3">
+                </div>
+            </div>
+        </div>
+
+        <section id="formazione">
+            <div class="formazione-header">
+                <h2>La mia formazione</h2>
+            </div>           
+            <div class="services-content">
+                <div class="service">
+                    <h3><span class="year">2021</span>  -  Laurea Triennale</h3>
+                    <p class="preview-text">Mi sono laureata in Logopedia all’Università di Genova con la votazione di 110 e lode.</p>
+                    
+                    <h3><span class="year">2024</span>  -  Master di I Livello</h3>
+                    <p class="preview-text"> Ho conseguito la specializzazione al Master "Logopedia in età evolutiva" presso l'Università San Raffaele Roma.
+                        Durante il Master ho svolto tirocini formativi presso lo studio della Prof.ssa Pamela Eramo a Latina.
+                    </p>
+                        <div class="extra-text" style="display: none;">
+                            <p>Da sempre nutro interesse e passione per il trattamento Logopedico del bambino, in età prescolare e scolare, per questo ho approfondito la mia formazione attraverso la specializzazione al Master "Logopedia in età evolutiva" presso l'Università San Raffaele Roma.
+                                Durante la mia formazione al Master, ho svolto diverse settimane di tirocinio a Latina, presso lo studio della Prof.ssa Pamela Eramo, docente del Metodo Sabbadini, che ha accettato di seguirmi nella presa in carico di un caso di DSA con deficit delle funzioni esecutive secondo un approccio Multisistemico e Integrato e di supervisionare la mia tesi finale, finalizzata a studiare i risultati di tale approccio. 
+                            </p>
+                        </div>
+                        <button class="toggle-button" onclick="toggleText(this)">Scopri di più</button>      
+                <div class="formazione-header">
+                    <h2>I miei corsi di formazione </h2>
+                </div>
+                <div class="collapsible-container">
+                    <button class="collapsible">PROMPT </button>
+                    <div class="content">
+                        <p><a href="index.html#prompt" class="styled-link">PROMPT</a> Approccio multidimensionale finalizzato alla valutazione ed al trattamento dei disordini dello speech. </p>
+                    </div>
+                    <button class="collapsible">PECS® </button>
+                    <div class="content">
+                        <p><a href="https://pecs-italy.com/pecs/" class="styled-link">Pyramid Educational Consultants Spain</a>, Sistema di Comunicazione per Intercambio di Immagini, basato sull'evidenza e riconosciuto a livello internazionale. Il sistema PECS è considerato un tipo di CAA Comunicazione Aumentativa Alternativa a bassa tecnologia, l’obiettivo è quello di permettere alle persone con scarse capacità di comunicazione di poter comunicare grazie all’utilizzo di immagini</p>
+                    </div>
+                    <button class="collapsible">SMOF </button>
+                    <div class="content">
+                        <p>Corso di alta formazione SMOF - Motricità Orofacciale, composto di pratica clinica con pazienti pediatrici (Dott.ssa Claudia L. P. Ferreira) e formazione su valutazione terapia dello squilibrio muscolare oro-facciale secondo il Metodo Andretta DI PRIMO LIVELLO.</p>
+                    </div>
+                    <button class="collapsible">Corso di alta formazione DSA</button>
+                    <div class="content">
+                        <p>DALLA VALUTAZIONE CLINICO-DIAGNOSTICA ALL'INTERVENTO. Corso specialistico sui Disturbi Specifici dell’Apprendimento (DSA) con focus su normativa, diagnosi multidisciplinare e intervento. Competenze per l’uso di strumenti diagnostici, la certificazione e l’applicazione di misure compensative e dispensative.</p>
+                    </div>
+                    <button class="collapsible">NOVAFON</button>
+                    <div class="content">
+                        <p>
+                            Nella pratica clinica logopedica il <a href="https://www.novafon.it/applicazione-umano/logopedia" class="styled-link">NOVAFON</a> è indicato nel trattamento di:
+                        </p>
+                        <ul>
+                            <li>Disturbo articolatorio del linguaggio</li>
+                            <li>Squilibrio Muscolare Orofacciale</li>
+                            <li>Alterazioni della Deglutizione</li>
+                            <li>Dolore Temporo-Mandibolare</li>
+                            <li>Disfagia</li>
+                            <li>Disprassia</li>
+                            <li>Disfonia</li>
+                            <li>Paralisi Cerebrale Infantile</li>
+                            <li>Paralisi facciale</li>
+                            <li>Disturbi neurologici e post traumatici</li>
+                            <li>Scialorrea</li>
+                            <li>Post intervento frenulo linguale</li>
+                            <li>Logopedia Estetica</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        
+        </section>
+        
+       
+ 
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    
+
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+        
+    <script>
+        function toggleText(button) {
+            var extraText = button.previousElementSibling;
+            if (extraText.style.display === "none" || extraText.style.display === "") {
+                extraText.style.display = "block";
+                button.textContent = "Mostra meno";
+            } else {
+                extraText.style.display = "none";
+                button.textContent = "Scopri di più";
+            }
+        }
+        </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script>
+    var slideIndex = 1; // Initialize with the first image
+
+    // Open modal when a slide is clicked
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Navigate to the current slide
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Show the selected slide
+    function showSlides(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        var demos = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+
+        // Ensure the index is within bounds
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+
+        // Hide all slides
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Display the current slide
+        slides[slideIndex - 1].style.display = "block";
+
+        // Highlight the current thumbnail
+        for (var i = 0; i < demos.length; i++) {
+            demos[i].style.opacity = "0.6";
+        }
+        demos[slideIndex - 1].style.opacity = "1";
+
+        // Update caption
+        captionText.innerHTML = demos[slideIndex - 1].alt;
+    }
+
+    // Navigate between slides
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    </script>
+    
+</body>
+</html>

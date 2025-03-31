@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/dcmo1.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="button">
+        <button class="back-button" onclick="window.location.href='di-cosa-mi-occupo.html'">&#8592; Torna Indietro</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Late Talkers<br>—<br>Ritardo del Linguaggio</span>
+                    <span class="desktop-only">Late Talkers - Ritardo del Linguaggio</span>
+                </h1>
+            </div>
+            <p>Il tuo bambino sembra comprendere, ma fatica ancora a parlare?</p>
+            <p>Il tuo bambino sembra non coinvolgerti nei suoi giochi?</p>
+            <p>Preferisce farsi capire attraverso la gestualità ed altri canali extra-verbali?</p>
+            <p>Dopo l’emergere delle prime parole, il suo sviluppo linguistico sembra aver rallentato?</p>
+        
+            <div class="title">
+                <h1>Chi sono i Late Talkers?</h1>
+            </div>
+            <p>I parlatori tardivi o <span class="highlight">“late talkers”</span> sono bambini che presentano un ritardo nell’acquisizione del linguaggio rispetto ai loro coetanei. Questo può manifestarsi con:</p>
+            <ul>
+                <li>All’età di 24 mesi producono meno di 50 parole.</li>
+                <li>All’età di 30 mesi non combinano due parole per formare le prime frasi.</li>
+            </ul>
+            <p class="box"><strong>Don’t worry!</strong> Essere un “late talker” non significa automaticamente sviluppare il Disturbo Specifico del Linguaggio.</p>
+        
+            <div class="title">
+                <h1>Che fare?</h1>
+            </div>
+            <div class="collapsible-container">
+                <button class="collapsible">Se il bambino parla poco ma cerca di comunicare con gesti e mimica</button>
+                <div class="content">
+                    <p>L'azione consigliata potrebbe essere il <strong>colloquio logopedico</strong> , ovvero, un controllo indiretto, dove il professionista indaga la storia anamnestica e linguistica, richiede la compilazione di questionari specifici e suggerisce buone pratiche comunicative ed una stimolazione linguistica indiretta.</p>
+                </div>
+                <button class="collapsible">Se vi è un'assenza totale del linguaggio o il bambino mostra scarso interesse a comunicare</button>
+                <div class="content">
+                    <p>l'azione consigliata potrebbe essere la <strong> valutazione logopedica</strong> , ovvero, una seduta di gioco con il bambino del genitore, per poter effettuare una valutazione qualitativa, verrà richiesta la compi</p>
+                </div>
+            </div>
+        
+            <p>Successivamente, verrà proposto un <strong>monitoraggio</strong> attivo a 24, 27 e 30 mesi.</p>
+        
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Late Bloomers <br>vs<br>Disturbo di Linguaggio</span>
+                    <span class="desktop-only">Late Bloomers vs Disturbo di Linguaggio</span>
+                </h1>
+            </div>
+            <ul>
+                <li>I Late Bloomers saranno i bambini che intorno ai 3 anni recupereranno il divario linguistico. </li>
+                <li>Si tratterà invece di “Disturbo di Linguaggio” in caso di persistente difficoltà nell'acquisizione e nell'uso del linguaggio, dovuti a deficit della comprensione o della produzione che comprendono un lessico ridotto, una limitata strutturazione delle frasi (basandosi su regole sintattiche e morfologiche) ed una compromissione delle capacità discorsive.</li>
+            </ul>
+        </div>
+        
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    
+</body>
+</html>

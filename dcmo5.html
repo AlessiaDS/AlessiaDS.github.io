@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/dcmo5.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="button">
+        <button class="back-button" onclick="window.location.href='di-cosa-mi-occupo.html'">&#8592; Torna Indietro</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Disprassia Verbale Evolutiva <br> (DVE)</span>
+                    <span class="desktop-only">Disprassia Verbale Evolutiva (DVE)</span>
+                </h1>
+            </div>
+            <p>Si tratta di un disordine congenito dell’articolazione dei suoni in cui la precisione e la coerenza dei movimenti preposti alla produzione linguistica risultano compromessi, in assenza di deficit neurologici, sensoriali o anomalie strutturali. </p>
+            <div class="intro-image">
+                <img src="img/dve.jpg" alt="Elena Magillo">
+            </div>
+            <p>L'attuale Gold standard utilizzato dai clinici per porre diagnosi consiste nell’individuazione di tre sintomi cardine, identificati da parte dell’American Speech-Language-Hearing Association (ASHA, 2007): </p>
+            <div class="collapsible-container">
+                <button class="collapsible">Errori fonologici “inconsistenti” </button>
+                <div class="content">
+                <p>Errori fonologici “inconsistenti” per un medesimo target, presenti durante la produzione di consonanti e di vocali.  </p>
+                </div>
+                <button class="collapsible">Difficoltà nella transizione articolatoria inter-segmentale</button>
+                <div class="content">
+                    <p>Il bambino con DVE sperimenta particolare difficoltà nell’organizzare le configurazioni articolatorie iniziali e nella transizione dinamica dei movimenti articolatori da un segmento ad un altro, per produrre sequenze di suoni e parole. <br>
+                        Questo può manifestarsi nella segregazione sillabica, ovvero nello scandire in sillabe la parola target “ta-ta-u-ga” e nel groping articolatorio, ovvero la tendenza del bimbo a procedere “per tentativo ed errore”, mettendo in atto movimenti oro-articolatori a vuoto, nel tentativo di ricercare, con fatica, la corretta combinazione co-articolatoria necessaria alla produzione delle parole.<br>
+                        Nelle prime fasi dello sviluppo, tale aspetto può determinare l’uso preferenziale di un unico suono prolungato o di un ristretto insieme di vocalizzazioni ricorrenti. <br>
+                        Il carente controllo della durata temporale e della rapidità di movimento degli organi articolatori, può riflettersi nella persistenza di fenomeni fonologici tipici di età cronologicamente inferiori, come desonorizzazione delle consonanti sonore (per “pa” in luogo di “ba”).
+                    </p>
+                </div>
+                <button class="collapsible">Alterazione degli aspetti prosodici</button>
+                <div class="content">
+                    <p>La produzione verbale appare alterata soprattutto in termini di velocità, ritmo ed intonazione.
+                    </p>
+                </div>
+            </div>
+        
+        </div>
+        
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    
+</body>
+</html>

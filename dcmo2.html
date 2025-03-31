@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/dcmo2.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                <div class="header-text">
+                    <h1>Elena Magillo</h1>
+                    <p class="subtitle">Dottoressa in logopedia</p>
+                </div>
+            </div>
+            <div class="nav-bar">
+                <span class="hamburger" onclick="toggleMenu()">☰</span>
+                <ul class="menu" id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="mipresento.html">Mi presento</a></li>
+                    <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                    <li><a href="contatti.html">Contatti</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="button">
+        <button class="back-button" onclick="window.location.href='di-cosa-mi-occupo.html'">&#8592; Torna Indietro</button>
+        </div>
+        <div class="container">
+            <div class="title">
+                <h1>
+                    <span class="mobile-only">Difficoltà nell’articolazione dei suoni e nella loro messa in sequenza</span>
+                    <span class="desktop-only">Difficoltà nell’articolazione dei suoni e nella loro messa in sequenza</span>
+                </h1>
+            </div>
+            <p>Il tuo bambino possiede tutti o quasi tutti i suoni, ma mentre parla alcuni di questi vengono prodotti in modo distorto?</p>
+            <p>Il bambino fatica a mettere i suoni in sequenza, in particolare nel momento in cui parla più velocemente o nelle parole lunghe?</p>
+
+            <p>Si definisce <strong>“Disturbo fonetico-fonologico”</strong> il persistere delle difficoltà nella produzione di suoni che interferisce con l'intelligibilità dell'eloquio o impedisce la comunicazione verbale. <br>
+                Il parlato del bambino potrebbe essere caratterizzato da alterazioni nella sequenza dei suoni che costituiscono le parole o da omissioni, aggiunte, sostituzioni e distorsioni dei fonemi, che frequentemente rendono poco comprensibile ciò che il bambino sta dicendo.<br>
+                È importante ricordare che queste alterazioni sono inizialmente presenti anche nello sviluppo tipico, in quanto la padronanza degli aspetti articolatori e delle pianificazioni delle sequenze viene raggiunta gradualmente. Dunque, è possibile osservare la persistenza di queste alterazioni oltre all'età appropriata (anche considerando la percezione dell'ambiente circostante, della scuola, del pediatra) soprattutto quando si hanno “scollamenti” tra le diverse abilità del bambino. 
+            </p>
+            <p>
+                Il tuo bambino non riesce a pronunciare alcuni suoni?
+            </p>
+            
+            <p>In alcuni casi, le difficoltà del bambino non riguardano la messa in sequenza dei suoni, bensì risultano circoscritte all’articolazione di uno o più fonemi. <br>
+                Si tratta di omissioni o sostituzioni di un suono con un altro: per esempio il tuo bambino non riesce a pronunciare la fricativa /v/ e sistematicamente la sostituisce con la bilabiale /b/, andando a pronunciare frasi come “bai via” invece di dire “vai via”. <br>
+                Si tratta di suoni che ancora non fanno parte dell’inventario dei fonemi del tuo bambino; questo cresce ed evolve fisiologicamente nel corso dei primi anni di vita. 
+                </p>
+
+            <p>Per avere dei riferimenti, secondo la letteratura, nello sviluppo tipico:</p>
+            <ul>
+                <li>-	entro i 2 anni età, l'80% dei bambini è in grado di produrre tutte le sette vocali, le consonanti occlusive sorde /p/, /b/, /k/, le nasali /m/ e /n/ e la laterale /I/ </li>
+                <li>-	entro i 3 anni compaiono anche le occlusive sonore /b/, /d/, /g/ e le semivocali /j/ (di niente /ˈnjɛnte /) e /w/ (di uovo / ˈwɔvo /).</li>
+                <li>-	l'inventario si completa entro i 4 anni e mezzo, salvo le affricate /ts/ (di stazione/ statˈtsjone /), /dz/ (di zaino /ˈdzai̯no/, /tʃ/ (di ciao ˈtʃao), /dʒ/ (di giacca / dʒ ˈakːa /), la laterale /ʎ/ (di foglia / fˈɔʎa /) e la fricativa /ʃ/ (di scimmia /ʃˈimmia/).</li>
+            </ul>
+    
+        <p>(Bowen, 1998; Grunwell, 1997; per i bambini italiani si considera Bortolini, 1995; Bortolini, Bonifacio, Marich e Fior, 1996; Marich e Bonifacio, 2004).</p>
+    
+        <p>Comunemente, è possibile richiedere una consulenza logopedica per la valutazione e l’eventuale trattamento di interdentalizzazione o lateralizzazione delle sibilanti ed il rotacismo. </p>
+    </div>
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    
+</body>
+</html>

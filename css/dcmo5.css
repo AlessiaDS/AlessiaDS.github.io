@@ -1,0 +1,442 @@
+/* General reset and styling */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Background for the entire page with a shadow overlay */
+body {
+    background-color: white;
+    background-size: cover; /* Ensure image covers the entire background without repeating */
+}
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Almost black with 80% opacity */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Scales between 0.8rem and 2rem */
+    color: white;
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: rgb(189, 188, 186);
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #afd0af; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+/* Main content styling */
+main {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Space out content with map at bottom */
+    align-items: center;
+    width: 100%; /* Ensure main takes up full width */
+}
+img {
+    width: clamp(550px, 30vw, 650px); /* Image scales between 150px and 300px based on screen size */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    padding: 2%;
+}
+
+/* Additional media query for extra small screens */
+@media (max-width: 480px) {
+    .intro-image img {
+        width: clamp(200px, 40vw, 350px); /* Smaller scaling for small screens */
+    }
+}
+.back-button {
+    display: inline-block;
+    color: black;
+    text-decoration: underline;
+    font-size: clamp(0.7em, 2vw, 1.1em); /* Font size responsive */
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 10px;
+}
+
+.back-button::before {
+    margin-right: 5px;
+}
+
+.button {
+    text-align: left;
+    width: 100%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.back-button:hover {
+    color: #A8D5BA;
+}
+
+.container {
+    background:rgb(254, 255, 251);
+    max-width: 1100px;
+    padding: 2%;
+    width: 80%;
+    color: #555;
+    margin: 0 auto; /* Centra il contenitore */
+
+}
+
+.title {
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 2%;
+    color:#555;
+    display: block; /* Assicura che il titolo sia un blocco */
+
+}
+.highlight {
+    font-weight: bold;
+    color: #A8D5BA;
+}
+
+.container p {
+    text-align: justify;
+    line-height: 1.8; /* Improved readability */
+    color: #555; /* Medium grey color */
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin-bottom: clamp(10px, 2vw, 15px); /* Responsive spacing between paragraphs */
+}
+.container ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: clamp(15px, 2vw, 25px); /* Responsive spacing between paragraphs */
+}
+.container ul li {
+    margin: 5px 0;
+    padding: 10px;
+    line-height: 1.8; /* Improved readability */
+    color: #555; /* Medium grey color */
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+}
+.box {
+    padding: 15px;
+    background: #D5E6DF;
+    border-left: 5px solid #A8D5BA;
+    margin: 15px 0;
+}
+
+.collapsible {
+    background-color: white;
+    line-height: 1.8; /* Improved readability */
+    color: #555;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    display: flex;
+    align-items: left; /* Allinea icona e testo verticalmente */
+    gap: 10px; /* Distanza tra icona e testo */
+    font-weight: bold
+}
+.content:last-of-type {
+    border-bottom: none; /* Removes border for last content */
+}
+.collapsible::before {
+    content: '\25B6'; /* ▶ Triangolo orizzontale */
+    color: #555;
+    font-weight: bold;
+    transition: transform 0.2s ease-in-out;
+}
+
+.active::before {
+    content: '\25BC'; /* ▼ Triangolo verticale */
+}
+.title h1 {
+    width: 100%;
+    text-align: center;
+    font-size: clamp(1.5em, 4vw, 3em);
+    color: #555;
+    font-weight: bold;
+}
+/* Mostra la versione per desktop e nasconde quella per mobile di default */
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
+/* Per schermi piccoli (max 600px), nasconde la versione desktop e mostra quella mobile */
+@media (max-width: 600px) {
+    .desktop-only {
+        display: none;
+    }
+    
+    .mobile-only {
+        display: block;
+    }
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: white;
+    border-bottom: 1px solid #ddd; /* Adds a divider */
+}
+
+.collapsible-container {
+margin: 20px 0; /* Adds space above and below */
+background-color: #f9f9f9; /* Light background color */
+}
+
+.content ul {
+    list-style-type: disc; /* Adds bullet points */
+    margin-left: 20px; /* Indentation */
+    color: #555; /* Text color */
+}
+
+.content li {
+    font-size: clamp(1em, 2vw, 1.2em);
+    line-height: 1.6;
+}
+
+/* Footer section */
+footer {
+    color: white;
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for "Link Utili" title with reduced margin */
+.footer-title {
+    font-size: 1.1em;
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
+    font-weight: bold;
+    color: white; /* Adjust color as desired */
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+}

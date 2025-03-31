@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - La Mia Homepage</title>
+    <link rel="stylesheet" href="css/di-cosa-mi-occupo.css">
+</head>
+<body>
+    <body>
+    
+        <header>
+            <div class="header-content">
+                <div class="header-left">
+                    <img src="img/logo.png" alt="Logo Icon" class="header-icon"> 
+                    <div class="header-text">
+                        <h1>Elena Magillo</h1>
+                        <p class="subtitle">Dottoressa in logopedia</p>
+                    </div>
+                </div>
+                <div class="nav-bar">
+                    <span class="hamburger" onclick="toggleMenu()">☰</span>
+                    <ul class="menu" id="menu">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="mipresento.html">Mi presento</a></li>
+                        <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                        <li><a href="contatti.html">Contatti</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+    <main>
+        <h2 class="section-title">Di cosa mi occupo...</h2>
+        <section id="educazione">
+            <div class="education-content">
+                <!-- Education 1 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/have-baby.gif" alt="Valutazione Logopedica Image">
+                    </div>
+                    <h3>Ritardo nell’acquisizione <br>delle prime parole</h3>
+                    <a href="dcmo1.html" class="toggle-button">Scopri di più</a>
+                </div>
+                
+                <!-- Education 2 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/language-diversity.gif" alt="Trattamento Logopedico Image">
+                    </div>
+                    <h3>Difficoltà nell’articolazione <br>e messa in sequenza dei suoni</h3>
+                    <a href="dcmo2.html" class="toggle-button">Scopri di più</a>
+                </div>
+        
+                <!-- Education 3 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/students.gif" alt="Education 3 Image">
+                    </div>
+                    <h3>Difficoltà e Disturbi Specifici di Apprendimento</h3>
+                    <a href="dcmo3.html" class="toggle-button">Scopri di più</a>
+                </div>
+        
+                <!-- Education 4 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/puzzle.gif" alt="Education 4 Image">
+                    </div>
+                    <h3>Disturbo dello Spettro Autistico</h3>
+                    <a href="dcmo4.html" class="toggle-button">Scopri di più</a>
+                </div>
+        
+                <!-- Education 5 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/chat.gif" alt="Education 5 Image">
+                    </div>
+                    <h3>Disprassia Verbale Evolutiva <br>(DVE)</h3>
+                    <a href="dcmo5.html" class="toggle-button">Scopri di più</a>
+                </div>
+        
+                <!-- Education 6 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/mouth.gif" alt="Education 6 Image">
+                    </div>
+                    <h3>Squilibrio muscolare orofacciale </h3>
+                    <a href="dcmo6.html" class="toggle-button">Scopri di più</a>
+                </div>
+
+                <!-- Education 7 -->
+                <div class="education">
+                    <div class="education-image">
+                        <img src="img/chat copia.gif" alt="Education 6 Image">
+                    </div>
+                    <h3>Balbuzie  </h3>
+                    <a href="dcmo7.html" class="toggle-button">Scopri di più</a>
+                </div>
+        
+            </div>
+        </section>
+          
+        
+    
+    </main>
+    <footer>
+        <h3 class="footer-title">Link Utili</h3> <!-- Title added here -->
+
+        <div class="footer-content">
+            <ul class="footer-menu">
+                <li><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li><a href="mipresento.html">Mi presento</a></li>
+                <li>|</li>
+                <li><a href="di-cosa-mi-occupo.html">Di cosa mi occupo</a></li>
+                <li>|</li>
+                <li><a href="contatti.html">Contatti</a></li>
+            </ul>
+            <p>Logopedista Elena Magillo © Tutti i diritti riservati | Via XX Settembre 8/21 5° piano studio MULTI 21, Genova, Italia | Part.IVA: 02792750990</p>
+        </div>
+    </footer>
+    
+
+    <!-- Fullscreen menu for mobile view -->
+    <div class="fullscreen-menu" id="fullscreenMenu">
+        <button class="close-btn" onclick="toggleMenu()">✕</button>
+        <a href="index.html" onclick="toggleMenu()">Home</a>
+        <a href="mipresento.html" onclick="toggleMenu()">Mi presento</a>
+        <a href="di-cosa-mi-occupo.html" onclick="toggleMenu()">Di cosa mi occupo</a>
+        <a href="contatti.html" onclick="toggleMenu()">Contatti</a>
+    </div>
+    <script>
+        function toggleText(button) {
+            const service = button.parentElement;
+            const previewText = service.querySelector('.preview-text');
+            const extraText = service.querySelector('.extra-text');
+            
+            if (extraText.style.display === "none") {
+                previewText.style.display = "none";
+                extraText.style.display = "block";
+                button.textContent = "Mostra meno"; // Change button text when showing
+            } else {
+                previewText.style.display = "block";
+                extraText.style.display = "none";
+                button.textContent = "Scopri di più"; // Reset button text when hiding
+            }
+        }
+    </script>
+    <script>
+        // Toggle fullscreen menu display
+        function toggleMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+    <script>
+    var slideIndex = 1; // Initialize with the first image
+
+    // Open modal when a slide is clicked
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    // Navigate to the current slide
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    // Show the selected slide
+    function showSlides(n) {
+        var slides = document.getElementsByClassName("mySlides");
+        var demos = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+
+        // Ensure the index is within bounds
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+
+        // Hide all slides
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        // Display the current slide
+        slides[slideIndex - 1].style.display = "block";
+
+        // Highlight the current thumbnail
+        for (var i = 0; i < demos.length; i++) {
+            demos[i].style.opacity = "0.6";
+        }
+        demos[slideIndex - 1].style.opacity = "1";
+
+        // Update caption
+        captionText.innerHTML = demos[slideIndex - 1].alt;
+    }
+
+    // Navigate between slides
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    </script>
+    
+</body>
+</html>

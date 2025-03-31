@@ -1,0 +1,564 @@
+/* Reset some default margins and styles */
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Background for the entire page with a shadow overlay */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/home.jpg.avif') no-repeat center center;
+    background-size: cover; /* Ensure image covers the entire background without repeating */
+}
+
+/* Header section with percentage-based dimensions */
+header {
+    position: relative;
+    width: 100%;
+    height: 10vh; /* Adjusted height for better spacing */
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Almost black with 80% opacity */
+    display: flex;
+    align-items: center;
+}
+
+/* Styling the header content */
+.header-content {
+    width: 90%; /* Responsive width to fit different screens */
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0; /* Reduced padding for more compact layout */
+}
+
+/* Icon styling with responsive dimensions and left padding */
+.header-icon {
+    width: clamp(10px, 10vw, 60px); /* Icon scales between 10px and 50px */
+    max-width: 60px; /* Limit maximum width on large screens */
+    position: absolute; /* Position the icon absolutely within its container */
+    left: 15px; /* Add padding from the left edge */
+    top: 50%; /* Center vertically within the header */
+    transform: translateY(-50%); /* Adjust to center vertically based on its height */
+}
+
+/* Specific styling for landscape orientation on small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-icon {
+        width: 25px; /* Set a fixed width for landscape orientation */
+    }
+}
+
+/* Header text wrapper for h1 and subtitle */
+.header-text {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: calc(5px + 70px); /* Offset to the right of the icon, adjusting as needed */
+    transform: translateY(-50%); /* Adjust to center vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left within the container */
+}
+
+/* Scalable title */
+header h1 {
+    margin: 0;
+    font-size: clamp(0.8rem, 2vw, 1.5rem); /* Scales between 0.8rem and 2rem */
+    color: white;
+}
+
+/* Subtitle styling with scalable font */
+header .subtitle {
+    margin: 5px 0 0 0;
+    font-size: clamp(0.4rem, 1.2vw, 0.9rem); /* Scales between 0.4rem and 1.2rem */
+    font-style: italic;
+    color: rgb(189, 188, 186);
+}
+
+/* Landscape orientation adjustments for small screens */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .header-text {
+        left: calc(10px + 40px); /* Reduce the space in landscape orientation */
+    }
+}
+/* Navigation bar styling */
+.nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-bar ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-bar a:hover {
+    color: #afd0af; /* Change to a gold color on hover */
+}
+
+/* Hamburger menu styling */
+.hamburger {
+    font-size: 1.5em;
+    cursor: pointer;
+    display: none;
+    color: white;
+}
+
+/* Fullscreen menu styling for mobile */
+.fullscreen-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: 1;
+}
+
+.fullscreen-menu a {
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+    .nav-bar ul {
+        display: none; /* Hide the menu links on small screens */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger menu icon on small screens */
+    }
+}
+
+
+/* Carousel Section */
+.carousel-section {
+    width: 100%;
+    padding: 40px 0;
+    background-color:#D5E6DF;
+}
+
+.slideshow-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the images in the container on wider screens */
+    gap: 20px; /* Space between images */
+    overflow: hidden;
+    flex-wrap: wrap; /* Allow images to wrap to the next line on smaller screens */
+    align-items: center; /* Ensure images are vertically aligned in the container */
+}
+
+/* Ensure images fill the container without shifting */
+.slideshow img {
+    height: 400px; /* Set fixed height for all images */
+    width: auto; /* Keep aspect ratio */
+    object-fit: cover; /* Ensure images fill the container without stretching */
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 800px) {
+    .slideshow-container {
+        flex-direction: column; /* Stack images one below the other */
+        align-items: center; /* Center images horizontally */
+        justify-content: center; /* Center images vertically */
+        width: 100%;
+        padding-left: 20% /* Remove extra horizontal padding */
+    }
+
+    .slideshow img {
+        width: 100%; /* Make the images take full width of their container */
+        max-width: 80%; /* Prevent images from being too large */
+        height: auto; /* Maintain aspect ratio */
+        margin-bottom: 20px; /* Add space between stacked images */
+        display: block; /* Ensure proper alignment */
+    }
+}
+
+
+/* For larger screens (1920px and above) */
+@media screen and (min-width: 1920px) {
+    .slideshow-container {
+        gap: 40px; /* Increase space between images */
+    }
+
+    .slideshow img {
+        height: 600px; /* Increase image height */
+        width: auto; /* Keep aspect ratio */
+    }
+}
+
+/* Modal (Lightbox) Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.8); /* Background color */
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    width: 60%; /* Make the modal content smaller */
+    max-width: 600px;
+    height: auto;
+}
+
+.mySlides {
+    display: none; /* Hide all images initially */
+}
+
+/* Lightbox Modal Images */
+.mySlides img {
+    width: 60%;  /* Adjust the width to make the images smaller */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure images cover the space without distortion */
+    margin: 0 auto; /* Center the image horizontally */
+}
+
+/* Previous/Next buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 12px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 16px; /* Smaller font size */
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Caption text */
+.caption-container {
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+/* Thumbnail container */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Thumbnails */
+.demo {
+    width: 50px;  /* Smaller size for thumbnails */
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.demo:hover {
+    opacity: 1;
+}
+
+/* Close button */
+.close {
+    color: white;
+    font-size: 24px;  /* Make close button smaller */
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 600px) {
+    @media screen and (max-width: 600px) {
+        .modal-content {
+            width: 80%; /* Make modal content wider on small screens */
+            padding: 10px; /* Reduce padding to make the modal more compact */
+        }
+    
+        .mySlides img {
+            width: 70%;  /* Make images smaller on smaller screens */
+            height: auto; /* Maintain aspect ratio */
+        }
+    
+        .prev, .next {
+            padding: 8px;
+            font-size: 14px; /* Smaller font size for the arrows */
+        }
+    
+        .thumbnail-container {
+            gap: 5px; /* Reduce gap between thumbnails */
+        }
+    
+        .demo {
+            width: 40px;  /* Smaller size for thumbnails */
+            height: 40px;
+        }
+    
+        .close {
+            font-size: 20px;  /* Make close button smaller */
+            top: 5px; /* Adjust positioning to keep button visible */
+            right: 15px; /* Move button slightly left to avoid clipping */
+        }
+    }
+}
+
+
+
+
+.section-title {
+    text-align: center;
+    font-size: clamp(1.6em, 3vw, 3.5em); /* Responsive font size */
+    font-weight: bold;
+    margin-top: 5%; /* Space below the title */
+    color: #afd0af; /* Adjust color as needed */
+}
+
+#educazione {
+    padding-left: 8%;
+    padding-right: 8%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-bottom: 30px;
+}
+
+.education-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* Distribuisce equamente i riquadri */
+    column-gap: 15px; /* Aumenta lo spazio orizzontale tra gli elementi */
+    row-gap: 40px; /* Imposta lo spazio verticale a 0 */
+    align-items: stretch; /* Fa in modo che tutti i riquadri abbiano la stessa altezza */
+}
+
+.education {
+    transition: transform 0.3s;
+    flex-basis: 30%; /* Occupa il 30% della larghezza disponibile */
+    max-width: 350px; /* Limita la larghezza massima */
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Fa in modo che gli elementi interni si distribuiscano in modo uniforme */
+    height: 100%; /* Assicura che tutti abbiano la stessa altezza */
+    min-height: 450px;
+}
+
+.education-image img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 0%;
+    margin-top: 20%;
+}
+
+/* Adattamento per schermi piccoli */
+@media screen and (max-width: 800px) {
+    .education {
+        flex-basis: 100%; /* I riquadri occupano l'intera larghezza su schermi piccoli */
+        max-width: none;
+        min-height: 220px;
+    }
+
+    .education-image img {
+        height: auto;
+        margin-bottom: 0%;
+        margin-top: 10%;
+    }
+    .education {
+        max-width: 300px;
+        min-height: 350px;;
+        padding: 20px;
+    }
+}
+
+
+.education h3 {
+    font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
+    margin-bottom: 10px;
+    font-weight: normal;
+    text-align: center;
+    font-weight: bold;
+
+}
+.toggle-button {
+    background-color: #afd0af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.education a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.toggle-button:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
+    background-color: #D5E6DF;
+}
+
+.education:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+
+/* Footer section */
+footer {
+    color: white;
+    text-align: center;
+    padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0 auto; /* Center footer with automatic margins */
+    font-size: clamp(0.9em, 2vw, 1.2em); /* Responsive font size for different screens */
+    box-sizing: border-box; /* Ensure padding doesn't push content outside width */
+}
+
+/* Additional styling for small screens */
+@media (max-width: 768px) {
+    footer {
+        padding: clamp(7px, 4vw, 9px); /* Adjust padding for smaller screens */
+        font-size: clamp(0.8em, 3vw, 1em); /* Slightly smaller font size on small screens */
+        margin: 0 auto; /* Ensure footer stays centered */
+    }
+}
+
+/* Footer styles */
+.footer-content {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Styling for "Link Utili" title with reduced margin */
+.footer-title {
+    font-size: 1.1em;
+    margin-top: 10px; /* Reduced top margin */
+    margin-bottom: 5px; /* Reduced bottom margin */
+    font-weight: bold;
+    color: white; /* Adjust color as desired */
+}
+
+/* Footer menu styling */
+.footer-menu {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px; /* Reduced space between links and title */
+    flex-wrap: wrap;
+}
+
+.footer-menu li {
+    display: inline;
+    font-size: 1 em;
+}
+
+.footer-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Separator style */
+.footer-menu li:nth-child(odd) {
+    color: #aaa;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        padding: 15px;
+    }
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px; /* Ensure small space on smaller screens */
+    }
+    .footer-menu {
+        gap: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-menu {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .footer-menu li:nth-child(even) {
+        display: none;
+    }
+
+    .footer-title {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+}
