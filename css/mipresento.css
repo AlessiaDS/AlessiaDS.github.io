@@ -201,7 +201,7 @@ header .subtitle {
 /* Additional media query for extra small screens */
 @media (max-width: 480px) {
     .intro-image img {
-        width: clamp(200px, 40vw, 350px); /* Smaller scaling for small screens */
+        width: clamp(300px, 40vw, 450px); /* Smaller scaling for small screens */
     }
 
     .intro-section {
@@ -214,14 +214,14 @@ header .subtitle {
     }
 
     .intro-image {
-        margin-bottom: 15px; /* Increase margin below image */
+        margin-bottom: 5%; /* Increase margin below image */
     }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .intro-section {
-        flex-direction: column; /* Stack items vertically */
+        flex-direction: column; /* Inverte l'ordine dei figli */
         align-items: center; /* Center items for better layout */
         padding: 20px; /* Adjust padding for smaller screens */
     }
@@ -235,7 +235,40 @@ header .subtitle {
     }
 
     .intro-image {
-        margin-bottom: 20px; /* Increase the margin below the image */
+        margin-bottom: 5%; /* Increase the margin below the image */
+    }
+}
+
+@media (max-width: 480px) {
+    .intro-section {
+        padding: 10px; /* Reduce padding for small screens */
+        gap: 10px; /* Reduce space between elements */
+        display: flex;
+        flex-direction: column; /* Ensure stacking */
+        align-items: center; /* Center content */
+        text-align: center; /* Ensure text is centered */
+        width: 100%;
+    }
+
+    .intro-text {
+        width: 90%; /* Ensure text takes full width */
+        padding: 5px; /* Reduce extra spacing */
+    }
+
+    .intro-text h2 {
+        font-size: 1.5em; /* Reduce heading size for smaller screens */
+    }
+
+    .intro-image {
+        width: 100%; /* Force image container to take full width */
+        display: flex;
+        justify-content: center;
+    }
+
+    .intro-image img {
+        width: clamp(250px, 80vw, 400px); /* Scale properly for tiny screens */
+        max-width: 90%; /* Prevent overflowing */
+        height: auto; /* Keep aspect ratio */
     }
 }
 
@@ -259,29 +292,35 @@ header .subtitle {
 
 /* Ensure images fill the container without shifting */
 .slideshow img {
-    height: 400px; /* Set fixed height for all images */
+    height: 250px; /* Set fixed height for all images */
     width: auto; /* Keep aspect ratio */
     object-fit: cover; /* Ensure images fill the container without stretching */
     cursor: pointer;
     transition: opacity 0.3s ease;
 }
-
-/* Responsive Design for Smaller Screens */
+@media (max-width: 1120px)
+{
+    .slideshow img {
+    height: 150px; /* Set fixed height for all images */
+    }
+}
 @media screen and (max-width: 800px) {
     .slideshow-container {
-        flex-direction: column; /* Stack images one below the other */
-        align-items: center; /* Center images horizontally */
-        justify-content: center; /* Center images vertically */
+        display: flex;
+        justify-content: center; /* Center images horizontally */
+        align-items: center; /* Center images vertically */
+        flex-wrap: wrap; /* Allow images to wrap */
         width: 100%;
-        padding-left: 20% /* Remove extra horizontal padding */
+        padding-left: 0; /* Remove extra padding */
     }
 
     .slideshow img {
-        width: 100%; /* Make the images take full width of their container */
-        max-width: 80%; /* Prevent images from being too large */
-        height: auto; /* Maintain aspect ratio */
-        margin-bottom: 20px; /* Add space between stacked images */
-        display: block; /* Ensure proper alignment */
+        height: clamp(40px, 15vw, 150px); /* Altezza dinamica tra 70px e 150px */
+        width: auto; /* Keep aspect ratio */
+    }
+
+    .carousel-section {
+        padding: 20px 0;
     }
 }
 
