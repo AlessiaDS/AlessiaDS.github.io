@@ -12,8 +12,9 @@ body, html {
 
 /* Background for the entire page with a shadow overlay */
 body {
+    will-change: transform;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('../img/home.jpg.avif') no-repeat center center;
+                url('../img/home.jpg.webp') no-repeat center center;
     background-size: cover; /* Ensure image covers the entire background without repeating */
 }
 
