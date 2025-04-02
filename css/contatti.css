@@ -279,6 +279,7 @@ main {
 /* Contact card styling */
 .contact-card {
     display: flex;
+    text-decoration: none; /* Rimuove il sottolineato */
     align-items: center;
     flex-direction: column; /* Stack icon above text */
     text-align: center;
@@ -338,6 +339,11 @@ main {
 
 .contact-details a:hover {
     color:#A8D5BA; /* Colore del link al passaggio del mouse */
+}
+
+/* Effetto hover solo sulla mail */
+.email-link:hover {
+    color: #A8D5BA; /* Cambia colore quando il mouse passa sopra */
 }
 
 /* Footer section */
