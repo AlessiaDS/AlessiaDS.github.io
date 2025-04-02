@@ -342,7 +342,7 @@ header .subtitle {
 .modal {
     display: none; /* Hidden by default */
     position: fixed;
-    z-index: 1; /* Sit on top */
+    z-index: 9999; /* Ensure modal is on top of everything */
     left: 0;
     top: 0;
     width: 100%;
