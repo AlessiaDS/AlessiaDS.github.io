@@ -11,15 +11,17 @@ body, html {
     -webkit-backface-visibility: hidden;
 }
 
-.page-background {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+
+/* Background for the entire page with a shadow overlay */
+body {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('../img/home.jpg.webp') no-repeat center center;
     background-size: cover;
-    background-attachment: fixed;
-    will-change: transform;
 }
+
 /* Header section with percentage-based dimensions */
 header {
     position: relative;
