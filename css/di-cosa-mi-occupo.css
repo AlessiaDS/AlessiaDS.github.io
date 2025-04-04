@@ -10,15 +10,14 @@ body, html {
     box-sizing: border-box;
 }
 
-.page-background {
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    min-height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-                url('../img/home.jpg.webp') no-repeat center center;
-    background-size: cover;
-    background-attachment: fixed;
+/* Background for the entire page with a shadow overlay */
+body {
     will-change: transform;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url('../img/home.jpg.webp') no-repeat center center;
+    background-size: cover; /* Ensure image covers the entire background without repeating */
 }
+
 /* Header section with percentage-based dimensions */
 header {
     position: relative;
