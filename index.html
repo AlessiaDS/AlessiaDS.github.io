@@ -230,21 +230,19 @@
             menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
+    <button onclick="toggleVideo()">Play/Pausa</button>
+
     <script>
-        const video = document.getElementById('introVideo');
-        
-        video.addEventListener('pause', () => {
-          // Se non è stato stoppato volontariamente
-          if (!video.controls) {
-            video.play();
-          }
-        });
-      
-        // In alcuni casi serve anche all'inizio:
-        video.addEventListener('ended', () => {
+      const video = document.getElementById('introVideo');
+    
+      function toggleVideo() {
+        if (video.paused) {
           video.play();
-        });
-      </script>
+        } else {
+          video.pause();
+        }
+      }
+    </script>
     </div>
 </body>
 </html>
