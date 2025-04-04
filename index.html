@@ -35,7 +35,7 @@
                     <h2>Benvenuto!</h2> 
                 </div>
                 <div class="intro-text">
-                    <video id="introVideo" width="440" height="560" autoplay muted loop playsinline controls poster="img/anteprima.jpg">
+                    <video id="introVideo" width="440" height="560" autoplay muted loop playsinline controls poster="img/anteprima.jpg" onplay="videoPlay()" onpause="videoPause()">
                         <source src="img/video_mipresento.mp4" type="video/mp4">
                     </video>                  
                     <p>Mi chiamo Elena Magillo e sono una Logopedista genovese. Il Logopedista è il professionista sanitario che, in possesso della Laurea abilitante (L/SNT2), si occupa della valutazione, riabilitazione, prevenzione ed educazione di tutte le patologie che provocano disturbi della comunicazione e/o del linguaggio, specifici o secondari ad altre patologie. Inoltre, previene, valuta e riabilita i disturbi della voce, delle funzioni orali ed i Disturbi Specifici dell’Apprendimento (DSA).</p>
@@ -229,5 +229,22 @@
             menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
         }
     </script>
+    <script>
+        const video = document.getElementById('introVideo');
+      
+        function videoPlay() {
+          // Forza la riproduzione del video se si sta cercando di metterlo in pausa
+          if (video.paused) {
+            video.play();
+          }
+        }
+      
+        function videoPause() {
+          // Non fare nulla quando il video viene messo in pausa, per evitare conflitti
+          if (video.paused) {
+            video.play();
+          }
+        }
+      </script>
 </body>
 </html>
