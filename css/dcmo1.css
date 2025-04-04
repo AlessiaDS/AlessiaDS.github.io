@@ -9,7 +9,7 @@ body, html {
 
 /* Background for the entire page with a shadow overlay */
 body {
-    background-color: white;
+    background-color: rgb(254, 255, 251);
     background-size: cover; /* Ensure image covers the entire background without repeating */
 }
 
@@ -69,7 +69,7 @@ header {
 header h1 {
     margin: 0;
     font-size: clamp(0.8rem, 2vw, 1.5rem); /* Scales between 0.8rem and 2rem */
-    color: white;
+    color: rgb(254, 255, 251);
 }
 
 /* Subtitle styling with scalable font */
@@ -101,7 +101,7 @@ header .subtitle {
 }
 
 .nav-bar a {
-    color: white;
+    color: rgb(254, 255, 251);
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for hover effect */
@@ -116,7 +116,7 @@ header .subtitle {
     font-size: 1.5em;
     cursor: pointer;
     display: none;
-    color: white;
+    color: rgb(254, 255, 251);
 }
 
 /* Fullscreen menu styling for mobile */
@@ -136,7 +136,7 @@ header .subtitle {
 }
 
 .fullscreen-menu a {
-    color: white;
+    color: rgb(254, 255, 251);
     font-size: 1.5em;
     text-decoration: none;
 }
@@ -146,7 +146,7 @@ header .subtitle {
     top: 20px;
     right: 20px;
     font-size: 2em;
-    color: white;
+    color: rgb(254, 255, 251);
     background: none;
     border: none;
     cursor: pointer;
@@ -224,6 +224,7 @@ main {
 }
 
 .container p {
+    text-align: justify;
     line-height: 1.8; /* Improved readability */
     color: #555; /* Medium grey color */
     font-size: clamp(0.9em, 2.5vw, 1.1em); /* Responsive font size */
@@ -249,7 +250,7 @@ main {
 }
 
 .collapsible {
-    background-color: white;
+    background-color: rgb(254, 255, 251);
     line-height: 1.8; /* Improved readability */
     color: #555;
     cursor: pointer;
@@ -308,7 +309,7 @@ main {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: white;
+    background-color: rgb(254, 255, 251);
     border-bottom: 1px solid #ddd; /* Adds a divider */
 }
 
@@ -330,7 +331,7 @@ background-color: #f9f9f9; /* Light background color */
 
 /* Footer section */
 footer {
-    color: white;
+    color: rgb(254, 255, 251);
     text-align: center;
     padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
     width: 100%;
@@ -360,7 +361,7 @@ footer {
     margin-top: 10px; /* Reduced top margin */
     margin-bottom: 5px; /* Reduced bottom margin */
     font-weight: bold;
-    color: white; /* Adjust color as desired */
+    color: rgb(254, 255, 251); /* Adjust color as desired */
 }
 
 /* Footer menu styling */
@@ -382,7 +383,7 @@ footer {
 
 .footer-menu a {
     text-decoration: none;
-    color: white;
+    color: rgb(254, 255, 251);
 }
 
 .footer-menu a:hover {

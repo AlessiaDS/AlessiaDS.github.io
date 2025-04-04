@@ -10,9 +10,11 @@ body, html {
 /* Background for the entire page with a shadow overlay */
 body {
     will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0); /* trigger GPU rendering */
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('../img/home.jpg.webp') no-repeat center center;
-    background-size: cover; /* Ensure image covers the entire background without repeating */
+    background-size: cover;
 }
 
 /* Header section with percentage-based dimensions */
