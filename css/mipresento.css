@@ -107,7 +107,7 @@ header .subtitle {
     font-size: 1.5em;
     cursor: pointer;
     display: none;
-    color: white;
+    color: rgb(254, 255, 251);
 }
 /* Fullscreen menu styling for mobile */
 .fullscreen-menu {
@@ -125,7 +125,7 @@ header .subtitle {
     z-index: 1;
 }
 .fullscreen-menu a {
-    color: white;
+    color: rgb(254, 255, 251);
     font-size: 1.5em;
     text-decoration: none;
 }
@@ -134,7 +134,7 @@ header .subtitle {
     top: 20px;
     right: 20px;
     font-size: 2em;
-    color: white;
+    color: rgb(254, 255, 251);
     background: none;
     border: none;
     cursor: pointer;
@@ -381,7 +381,7 @@ header .subtitle {
     width: auto;
     padding: 12px;
     margin-top: -22px;
-    color: white;
+    color:rgb(254, 255, 251);
     font-weight: bold;
     font-size: 16px; /* Smaller font size */
     background-color: rgba(0, 0, 0, 0.5);
@@ -400,7 +400,7 @@ header .subtitle {
 /* Caption text */
 .caption-container {
     text-align: center;
-    color: white;
+    color: rgb(254, 255, 251);
     padding: 10px;
 }
 
@@ -428,7 +428,7 @@ header .subtitle {
 
 /* Close button */
 .close {
-    color: white;
+    color: rgb(254, 255, 251);
     font-size: 24px;  /* Make close button smaller */
     font-weight: bold;
     position: absolute;
@@ -586,7 +586,7 @@ header .subtitle {
         }
 
         .collapsible {
-            background-color: white;
+            background-color: rgb(254, 255, 251);
             color: #333;
             cursor: pointer;
             padding: 18px;
@@ -604,7 +604,7 @@ header .subtitle {
     
 
 .collapsible {
-    background-color: white;
+    background-color: rgb(254, 255, 251);
     color: #333;
     cursor: pointer;
     padding: 18px;
@@ -618,6 +618,7 @@ header .subtitle {
     align-items: center; /* Allinea icona e testo verticalmente */
     gap: 10px; /* Distanza tra icona e testo */
 }
+
 .content:last-of-type {
     border-bottom: none; /* Removes border for last content */
 }
@@ -638,14 +639,14 @@ header .subtitle {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    background-color: white;
+    background-color: rgb(254, 255, 251);
     border-bottom: 1px solid #ddd; /* Adds a divider */
 }
 
 
 .collapsible-container {
-margin: 20px 0; /* Adds space above and below */
-background-color: #f9f9f9; /* Light background color */
+    background-color: rgb(254, 255, 251);
+    margin: 20px 0; /* Adds space above and below */
 }
 
 .styled-link {
@@ -660,20 +661,21 @@ background-color: #f9f9f9; /* Light background color */
     text-decoration: underline; /* Underline on hover */
 }
 .content ul {
+    text-align: left;
+    padding-left: 1rem; /* o anche 0.8rem per stare più a sinistra */
     list-style-type: disc; /* Adds bullet points */
-    margin-left: 20px; /* Indentation */
     color: #555; /* Text color */
 }
 
 .content li {
-    font-size: clamp(1em, 2vw, 1.2em);
+    font-size: clamp(0.8em, 2vw, 1.1em);
     line-height: 1.6;
 }
 
 
 /* Footer section */
 footer {
-    color: white;
+    color: rgb(254, 255, 251);
     text-align: center;
     padding: clamp(8px, 3vw, 15px); /* Responsive padding for inner spacing */
     width: 100%;
@@ -704,7 +706,7 @@ footer {
     margin-top: 10px; /* Reduced top margin */
     margin-bottom: 5px; /* Reduced bottom margin */
     font-weight: bold;
-    color: white; /* Adjust color as desired */
+    color: rgb(254, 255, 251); /* Adjust color as desired */
 }
 
 /* Footer menu styling */
@@ -726,7 +728,7 @@ footer {
 
 .footer-menu a {
     text-decoration: none;
-    color: white;
+    color: rgb(254, 255, 251);
 }
 
 .footer-menu a:hover {
