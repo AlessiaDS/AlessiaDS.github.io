@@ -490,20 +490,10 @@ footer {
         margin: 0 auto; /* Ensure footer stays centered */
     }
 }
-
 /* Footer styles */
 .footer-content {
     text-align: center;
     padding: 20px;
-}
-
-/* Styling for "Link Utili" title with reduced margin */
-.footer-title {
-    font-size: 1.1em;
-    margin-top: 10px; /* Reduced top margin */
-    margin-bottom: 5px; /* Reduced bottom margin */
-    font-weight: bold;
-    color: rgb(254, 255, 251); /* Adjust color as desired */
 }
 
 /* Footer menu styling */
@@ -522,6 +512,10 @@ footer {
     display: inline;
     font-size: 1 em;
 }
+.footer-menu-inline li{
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
+
 
 .footer-menu a {
     text-decoration: none;
@@ -537,7 +531,10 @@ footer {
     color: #aaa;
     font-weight: normal;
 }
-
+.footer-small {
+    padding-top: 1%;
+    font-size: clamp(0.6em, 3vw, 0.8em); /* Slightly smaller font size on small screens */
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .footer-content {
@@ -557,13 +554,20 @@ footer {
         flex-direction: column;
         gap: 5px;
     }
-    
+
+    /* Mantieni inline solo il secondo menu */
+    .footer-menu-inline {
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        gap: 8px;
+    }
+
     .footer-menu li:nth-child(even) {
         display: none;
     }
 
-    .footer-title {
-        font-size: 1em;
-        margin-bottom: 5px;
+    .footer-menu-inline li:nth-child(even) {
+        display: inline; /* Riattiva i separatori nel menu orizzontale */
     }
 }
+
